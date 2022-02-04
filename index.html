@@ -22,27 +22,26 @@
         alert("Нет такого имени");
       }
 
-      function multiplesOf(numbers, number) {
-        var multiples = [];
-        for (var i = 0; i < numbers.length; i++) {
-          if (numbers[i] % number === 0) {
-            multiples.push(numbers[i]);
-          }
-        }
+    
 
-        return multiples;
-      }
+      const multipleOfThree = (arr) => arr.filter((el) => el % 3 === 0);
       console.log(
-        multiplesOf(
-          [
-            0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
-            19, 20,
-          ],
-          3
-        )
+        multipleOfThree([
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+          20,
+        ])
       );
-      let arr = multiplesOf;
-      alert("Элементы массива кратные 3" + arr);
+      let arr = multipleOfThree([
+        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+        20,
+      ]);
+      alert(
+        `Элементы массива кратные 3 = ${multipleOfThree([
+          0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+          20,
+        ])}`
+      );
     </script>
   </body>
 </html>
+
